@@ -1,0 +1,10 @@
+README.rdoc
+LICENSE
+History.rdoc
+Manifest.txt
+Rakefile
+lib/lettercase.rb
+lib/lettercase/core.rb
+lib/lettercase/ext.rb
+lib/lettercase/version.rb
+example/example.rb
