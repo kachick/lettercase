@@ -4,7 +4,10 @@ History.rdoc
 Manifest.txt
 Rakefile
 lib/lettercase.rb
-lib/lettercase/core.rb
-lib/lettercase/ext.rb
 lib/lettercase/version.rb
+lib/lettercase/constants.rb
+lib/lettercase/extensions.rb
+lib/lettercase/ext.rb
+test/test_helper.rb
+test/test_lettercase.rb
 example/example.rb
