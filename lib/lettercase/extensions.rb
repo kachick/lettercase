@@ -2,9 +2,6 @@
 
 module LetterCase
 
-  DELIMITER = '_'.freeze
-  private_constant :DELIMITER if respond_to? :private_constant
-  
   module StringExtension
     def UPCASE
       upcase
@@ -21,7 +18,7 @@ module LetterCase
     end
 
     def pascalcase
-      gsub(/\w+/, &:force_pascalcase)
+      gsub(/\w+/) {|s|s.extend(StringExtension).force_pascalcase}
     end
     
     alias_method :PascalCase, :pascalcase
@@ -34,7 +31,7 @@ module LetterCase
             when 0
               word.downcase
             else
-              word.force_pascalcase
+              word.extend(StringExtension).force_pascalcase
             end
           end
         }
@@ -58,23 +55,6 @@ module LetterCase
         to_str.__send__ method
       end
     end
-  end
-
-  class << self
-  
-    {
-      :snakelize       => :snakecase,
-      :force_pascalize => :force_pascalcase,
-      :pascalize       => :pascalize,
-      :camelize        => :camelcase
-    }.
-    each_pair do |via, after|
-      define_method via do |stringlike|
-        ret = stringlike.to_s.dup.extend(StringExtension).__send__ after
-        stringlike.kind_of?(Symbol) ? ret.to_sym : ret
-      end
-    end
-  
   end
 
 end

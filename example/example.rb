@@ -2,6 +2,10 @@ $VERBOSE = true
 
 require_relative '../lib/lettercase'
 
+p LetterCase.pascalize('letter_case') #=> "LetterCase"
+
+require_relative '../lib/lettercase/ext'
+
 # * basic
 p  'LetterCase'.snakecase    #=> "letter_case"
 p  'letter_case'.camelcase    #=> "letterCase"
