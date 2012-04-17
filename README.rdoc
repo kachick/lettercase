@@ -1,4 +1,4 @@
-= LetterCase
+= lettercase
 
 * http://github.com/kachick/lettercase
 * http://rubygems.org/gems/lettercase
@@ -19,6 +19,12 @@ Convert some letter cases in computer programming.
 * setup
     require 'lettercase'
 
+* no taint global-name-space when without ext.rb
+    LetterCase.pascalize('letter_case') #=> "LetterCase"
+
+* extend
+    require 'lettercase/ext'
+
 * basic
     'LetterCase'.snakecase    #=> "letter_case"
     'letter_case'.camelcase   #=> "letterCase"
@@ -30,10 +36,10 @@ Convert some letter cases in computer programming.
     'letter_case'.camelCase   #=> "letterCase"
     'letter_case'.PascalCase  #=> "LetterCase"
 
-* Symbol too
+* Symbol
     :'letter_case'.PascalCase #=> :LetterCase
 
-* can use your stringable classes (must have #to_str method)
+* You can use these API in own stringable classes (depend #to_str method)
     class LikeString
       include LetterCase::StringableExtension
       
@@ -58,7 +64,8 @@ Convert some letter cases in computer programming.
 * gem install lettercase
 
 == License
+The MIT X11 License
 
-Copyright (C) 2012  Kenichi Kamiya
+Copyright (c) 2012 Kenichi Kamiya. 
 
-The MIT License (See the file LICENSE)
+See the file LICENSE for further details.

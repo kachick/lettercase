@@ -1,9 +1,10 @@
 # Copyright (C) 2012  Kenichi Kamiya
 
 module LetterCase
+
   DELIMITER = '_'.freeze
   private_constant :DELIMITER if respond_to? :private_constant
-    
+  
   module StringExtension
     def UPCASE
       upcase
@@ -42,7 +43,7 @@ module LetterCase
     
     alias_method :camelCase, :camelcase
   end
-  
+
   module SymbolExtension
     StringExtension.instance_methods.each do |method|
       define_method method do
@@ -50,7 +51,7 @@ module LetterCase
       end
     end
   end
-  
+
   module StringableExtension
     StringExtension.instance_methods.each do |method|
       define_method method do
@@ -58,4 +59,22 @@ module LetterCase
       end
     end
   end
+
+  class << self
+  
+    {
+      :snakelize       => :snakecase,
+      :force_pascalize => :force_pascalcase,
+      :pascalize       => :pascalize,
+      :camelize        => :camelcase
+    }.
+    each_pair do |via, after|
+      define_method via do |stringlike|
+        ret = stringlike.to_s.dup.extend(StringExtension).__send__ after
+        stringlike.kind_of?(Symbol) ? ret.to_sym : ret
+      end
+    end
+  
+  end
+
 end
