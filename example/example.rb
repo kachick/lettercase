@@ -29,4 +29,4 @@ class LikeString
   end
 end
 
-p LikeString.new.snake_case
+p LikeString.new.snake_case   #=> "a_bc"

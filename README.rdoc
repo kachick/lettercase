@@ -1,8 +1,7 @@
 = lettercase
 
-* http://github.com/kachick/lettercase
-* http://rubygems.org/gems/lettercase
-* http://rubyforge.org/projects/lettercase
+code :: http://github.com/kachick/lettercase
+gem  :: http://rubygems.org/gems/lettercase
 
 == Description
 
@@ -17,29 +16,36 @@ Convert some letter cases in computer programming.
 == Usage
 
 * setup
+
     require 'lettercase'
 
 * no taint global-name-space when without ext.rb
+
     LetterCase.pascalize('letter_case') #=> "LetterCase"
 
 * extend
+
     require 'lettercase/ext'
 
 * basic
+
     'LetterCase'.snakecase    #=> "letter_case"
     'letter_case'.camelcase   #=> "letterCase"
     'letter_case'.pascalcase  #=> "LetterCase"
 
 * aliases (method name describes your self)
+
     'lettercase'.UPCASE       #=> "LETTERCASE"
     'LetterCase'.snake_case   #=> "letter_case"
     'letter_case'.camelCase   #=> "letterCase"
     'letter_case'.PascalCase  #=> "LetterCase"
 
 * Symbol
+
     :'letter_case'.PascalCase #=> :LetterCase
 
 * You can use these API in own stringable classes (depend #to_str method)
+
     class LikeString
       include LetterCase::StringableExtension
       
@@ -48,15 +54,15 @@ Convert some letter cases in computer programming.
       end
     end
     
-    LikeString.new.snake_case #=> :a_bc
+    LikeString.new.snake_case #=> "a_bc"
 
 == Requirements
 
 * Ruby 1.9.2 or later
   
-  target release versions
+  Focusing
   
-  * 1.9.3-p125
+  * 1.9.3-p194
   * 1.9.2-p290
 
 == Installation
@@ -64,6 +70,7 @@ Convert some letter cases in computer programming.
 * gem install lettercase
 
 == License
+
 The MIT X11 License
 
 Copyright (c) 2012 Kenichi Kamiya. 
