@@ -3,6 +3,8 @@ LICENSE
 History.rdoc
 Manifest.txt
 Rakefile
+Gemfile
+lettercase.gemspec
 lib/lettercase.rb
 lib/lettercase/version.rb
 lib/lettercase/constants.rb
