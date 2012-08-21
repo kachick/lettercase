@@ -3,6 +3,7 @@
 module LetterCase
 
   module StringExtension
+
     def UPCASE
       upcase
     end
@@ -39,22 +40,7 @@ module LetterCase
     end
     
     alias_method :camelCase, :camelcase
-  end
 
-  module SymbolExtension
-    StringExtension.instance_methods.each do |method|
-      define_method method do
-        to_s.__send__(method).to_sym
-      end
-    end
-  end
-
-  module StringableExtension
-    StringExtension.instance_methods.each do |method|
-      define_method method do
-        to_str.__send__ method
-      end
-    end
   end
 
 end
