@@ -1,11 +1,10 @@
 = lettercase
 
-code :: http://github.com/kachick/lettercase
-gem  :: http://rubygems.org/gems/lettercase
+{<img src="https://secure.travis-ci.org/kachick/lettercase.png" />}[http://travis-ci.org/kachick/lettercase]
 
 == Description
 
-Convert some letter cases in computer programming.
+Convert some letter cases arround programming.
 
 == Features
 
@@ -33,7 +32,7 @@ Convert some letter cases in computer programming.
     'letter_case'.camelcase   #=> "letterCase"
     'letter_case'.pascalcase  #=> "LetterCase"
 
-* aliases (method name describes your self)
+* aliases (method name describes own self)
 
     'lettercase'.UPCASE       #=> "LETTERCASE"
     'LetterCase'.snake_case   #=> "letter_case"
@@ -59,19 +58,22 @@ Convert some letter cases in computer programming.
 == Requirements
 
 * Ruby 1.9.2 or later
-  
-  Focusing
-  
-  * 1.9.3-p194
-  * 1.9.2-p290
 
 == Installation
 
-* gem install lettercase
+    gem install lettercase
+
+== Links
+
+code   :: https://github.com/kachick/lettercase
+issues :: https://github.com/kachick/lettercase/issues
+CI     :: http://travis-ci.org/#!/kachick/lettercase
+gem    :: https://rubygems.org/gems/lettercase
+gem+   :: http://metagem.info/gems/lettercase
 
 == License
 
-The MIT X11 License
+The MIT X License
 
 Copyright (c) 2012 Kenichi Kamiya. 
 
