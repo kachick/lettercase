@@ -5,8 +5,8 @@ require File.expand_path('../lib/lettercase/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
-  gem.description   = %q{Convert some letter cases arround programming.}
-  gem.summary       = %q{Convert some letter cases arround programming.}
+  gem.description   = %q{Convert some letter cases around programming.}
+  gem.summary       = %q{Convert some letter cases around programming.}
   gem.homepage      = 'https://github.com/kachick/lettercase'
 
   gem.files         = `git ls-files`.split($\)
