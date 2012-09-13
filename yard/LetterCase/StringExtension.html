@@ -106,7 +106,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#camelcase-instance_method" title="#camelcase (instance method)">- (Object) <strong>camelcase</strong> </a>
+      <a href="#camelcase-instance_method" title="#camelcase (instance method)">- (String) <strong>camelcase</strong> </a>
     
 
     
@@ -130,7 +130,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#force_pascalcase-instance_method" title="#force_pascalcase (instance method)">- (Object) <strong>force_pascalcase</strong> </a>
+      <a href="#force_pascalcase-instance_method" title="#force_pascalcase (instance method)">- (String) <strong>force_pascalcase</strong> </a>
     
 
     
@@ -152,7 +152,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pascalcase-instance_method" title="#pascalcase (instance method)">- (Object) <strong>pascalcase</strong> </a>
+      <a href="#pascalcase-instance_method" title="#pascalcase (instance method)">- (String) <strong>pascalcase</strong> </a>
     
 
     
@@ -176,7 +176,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#snakecase-instance_method" title="#snakecase (instance method)">- (Object) <strong>snakecase</strong> </a>
+      <a href="#snakecase-instance_method" title="#snakecase (instance method)">- (String) <strong>snakecase</strong> </a>
     
 
     
@@ -200,7 +200,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#UPCASE-instance_method" title="#UPCASE (instance method)">- (Object) <strong>UPCASE</strong> </a>
+      <a href="#UPCASE-instance_method" title="#UPCASE (instance method)">- (String) <strong>UPCASE</strong> </a>
     
 
     
@@ -231,7 +231,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="camelcase-instance_method">
   
-    - (<tt>Object</tt>) <strong>camelcase</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>camelcase</strong> 
   
 
   
@@ -241,17 +241,34 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-25
-26
-27
-28
-29
 30
 31
 32
@@ -260,10 +277,15 @@
 35
 36
 37
-38</pre>
+38
+39
+40
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_camelcase'>camelcase</span>
   <span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\w+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_chunk'>chunk</span><span class='op'>|</span>
@@ -287,24 +309,46 @@
       <div class="method_details ">
   <h3 class="signature " id="force_pascalcase-instance_method">
   
-    - (<tt>Object</tt>) <strong>force_pascalcase</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>force_pascalcase</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_force_pascalcase'>force_pascalcase</span>
   <span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>DELIMITER</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:capitalize</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
@@ -317,7 +361,7 @@
       <div class="method_details ">
   <h3 class="signature " id="pascalcase-instance_method">
   
-    - (<tt>Object</tt>) <strong>pascalcase</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>pascalcase</strong> 
   
 
   
@@ -327,18 +371,40 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-19
-20
-21</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pascalcase'>pascalcase</span>
   <span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\w+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_extend'>extend</span><span class='lparen'>(</span><span class='const'>StringExtension</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_force_pascalcase'>force_pascalcase</span><span class='rbrace'>}</span>
@@ -351,7 +417,7 @@
       <div class="method_details ">
   <h3 class="signature " id="snakecase-instance_method">
   
-    - (<tt>Object</tt>) <strong>snakecase</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>snakecase</strong> 
   
 
   
@@ -361,18 +427,40 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-9
-10
-11</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_snakecase'>snakecase</span>
   <span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([a-z])([A-Z])</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='lbracket'>[</span><span class='backref'>$1</span><span class='comma'>,</span> <span class='backref'>$2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='const'>DELIMITER</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
@@ -385,24 +473,46 @@
       <div class="method_details ">
   <h3 class="signature " id="UPCASE-instance_method">
   
-    - (<tt>Object</tt>) <strong>UPCASE</strong> 
+    - (<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>) <strong>UPCASE</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/lettercase/stringextension.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='const'>UPCASE</span>
   <span class='id identifier rubyid_upcase'>upcase</span>
@@ -417,7 +527,7 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Sep 14 06:25:52 2012 by
+  Generated on Fri Sep 14 06:39:51 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>
