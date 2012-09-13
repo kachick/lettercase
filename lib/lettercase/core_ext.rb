@@ -1,5 +1,4 @@
-require_relative 'stringextension'
-require_relative 'symbolextension'
+require_relative '../lettercase'
 
 class String
 
