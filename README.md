@@ -43,7 +43,7 @@ require 'lettercase/core_ext'
 Requirements
 -------------
 
-* Ruby - [1.9.2 or later](http://travis-ci.org/#!/kachick/lettercase)
+* Ruby - [2.5 or later](http://travis-ci.org/#!/kachick/lettercase)
 
 Install
 -------
