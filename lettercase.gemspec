@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.version       = LetterCase::VERSION.dup # dup for https://github.com/rubygems/rubygems/commit/48f1d869510dcd325d6566df7d0147a086905380#-P0
 
-  gem.add_development_dependency 'yard', '~> 0.8.2.1'
+  gem.add_development_dependency 'test-unit', '>= 3.3.3', '< 4'
+  gem.add_development_dependency 'yard', '>= 0.9.20', '< 2'
 end
 
