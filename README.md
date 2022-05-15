@@ -1,7 +1,8 @@
 lettercase
 ==========
 
-[![Build Status](https://secure.travis-ci.org/kachick/lettercase.png)](http://travis-ci.org/kachick/lettercase)
+[![Build Status]](https://github.com/kachick/lettercase/actions/workflows/test_behaviors.yml/badge.svg?branch=main)
+[![Gem Version](https://badge.fury.io/rb/lettercase.png)](http://badge.fury.io/rb/lettercase)
 
 Description
 -----------
@@ -15,8 +16,6 @@ Features
 * camelCase
 * PascalCase
 
-* PureRuby :)
-
 Usage
 -----
 
@@ -27,7 +26,7 @@ require 'lettercase'
 
 LetterCase.pascalize 'letter_case' #=> "LetterCase"
 
-require 'lettercase/core_ext'
+using LetterCase
 
 'LetterCase'.snakecase             #=> "letter_case"
 'letter_case'.camelcase            #=> "letterCase"
@@ -43,7 +42,7 @@ require 'lettercase/core_ext'
 Requirements
 -------------
 
-* Ruby - [2.5 or later](http://travis-ci.org/#!/kachick/lettercase)
+* Ruby - 3.1 or later
 
 Install
 -------
@@ -52,18 +51,9 @@ Install
 $ gem install lettercase
 ```
 
-Link
-----
-
-* [code](https://github.com/kachick/lettercase)
-* [API](http://kachick.github.com/lettercase/yard/frames.html)
-* [issues](https://github.com/kachick/lettercase/issues)
-* [CI](http://travis-ci.org/#!/kachick/lettercase)
-* [gem](https://rubygems.org/gems/lettercase)
-
 License
 --------
 
-The MIT X11 License  
-Copyright (C) 2012 Kenichi Kamiya  
+The MIT X11 License
+Copyright (C) 2012 Kenichi Kamiya
 See the file LICENSE for further details.

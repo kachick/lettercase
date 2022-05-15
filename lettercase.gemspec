@@ -1,20 +1,46 @@
-require File.expand_path('../lib/lettercase/version', __FILE__)
+# coding: us-ascii
+# frozen_string_literal: true
+
+lib_name = 'lettercase'
+
+require_relative './lib/lettercase/version'
+repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
+  gem.summary       = %q{Converter for some letter cases}
+  gem.description   = <<-'DESCRIPTION'
+    Converter for some letter cases
+  DESCRIPTION
+  gem.homepage      = repository_url
+  gem.license       = 'MIT'
+  gem.name          = lib_name
+  gem.version       = LetterCase::VERSION
+
+  gem.metadata = {
+    'documentation_uri'     => 'https://kachick.github.io/lettercase/',
+    'homepage_uri'          => repository_url,
+    'source_code_uri'       => repository_url,
+    'bug_tracker_uri'       => "#{repository_url}/issues",
+    'rubygems_mfa_required' => 'true'
+  }
+
+  gem.required_ruby_version = Gem::Requirement.new('>= 3.1.0')
+
+  # common
+
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
-  gem.description   = %q{Convert some letter cases around programming.}
-  gem.summary       = %q{Convert some letter cases around programming.}
-  gem.homepage      = 'https://github.com/kachick/lettercase'
+  git_managed_files = `git ls-files`.lines.map(&:chomp)
+  might_be_parsing_by_tool_as_dependabot = git_managed_files.empty?
+  base_files = Dir['README*', '*LICENSE*',  'lib/**/*', 'sig/**/*'].uniq
+  files = might_be_parsing_by_tool_as_dependabot ? base_files : (base_files & git_managed_files)
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features|declare)/})
-  gem.name          = 'lettercase'
+  unless might_be_parsing_by_tool_as_dependabot
+    if files.grep(%r!\A(?:lib|sig)/!).size < 2
+      raise "obvious mistaken in packaging files, looks shortage: #{files.inspect}"
+    end
+  end
+
+  gem.files         = files
   gem.require_paths = ['lib']
-  gem.version       = LetterCase::VERSION.dup # dup for https://github.com/rubygems/rubygems/commit/48f1d869510dcd325d6566df7d0147a086905380#-P0
-
-  gem.add_development_dependency 'test-unit', '>= 3.3.3', '< 4'
-  gem.add_development_dependency 'yard', '>= 0.9.20', '< 2'
 end
-
