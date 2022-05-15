@@ -29,7 +29,7 @@ module LetterCase
     # @return [String]
     def camelcase
       gsub(/\w+/) { |chunk|
-        ''.tap { |s|
+        (+'').tap { |s|
           chunk.split(DELIMITER).each_with_index do |word, index|
             s << case index
                  when 0
