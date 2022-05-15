@@ -1,7 +1,7 @@
 lettercase
 ==========
 
-[![Build Status]](https://github.com/kachick/lettercase/actions/workflows/test_behaviors.yml/badge.svg?branch=main)
+[![Build Status](https://github.com/kachick/lettercase/actions/workflows/test_behaviors.yml/badge.svg?branch=main)]((https://github.com/kachick/lettercase/actions/workflows/test_behaviors.yml/?branch=main))
 [![Gem Version](https://badge.fury.io/rb/lettercase.png)](http://badge.fury.io/rb/lettercase)
 
 Description
