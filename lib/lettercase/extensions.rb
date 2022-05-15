@@ -12,7 +12,9 @@ module LetterCase
       gsub(/([a-z])([A-Z])/) { [Regexp.last_match(1), Regexp.last_match(2)].join(DELIMITER) }.downcase
     end
 
-    alias_method :snake_case, :snakecase
+    def snake_case
+      snakecase
+    end
 
     # @return [String]
     def force_pascalcase
@@ -21,10 +23,12 @@ module LetterCase
 
     # @return [String]
     def pascalcase
-      gsub(/\w+/) { |s| s.extend(StringExtension).force_pascalcase }
+      gsub(/\w+/, &:force_pascalcase)
     end
 
-    alias_method :PascalCase, :pascalcase
+    def PascalCase
+      pascalcase
+    end
 
     # @return [String]
     def camelcase
@@ -35,13 +39,36 @@ module LetterCase
                  when 0
                    word.downcase
                  else
-                   word.extend(StringExtension).force_pascalcase
+                   word.force_pascalcase
                  end
           end
         }
       }
     end
 
-    alias_method :camelCase, :camelcase
+    def camelCase
+      camelcase
+    end
+  end
+
+  refine String do
+    import_methods StringExtension
+  end
+
+  module SymbolExtension
+    %i[UPCASE snakecase snake_case force_pascalcase pascalcase PascalCase camelcase camelCase].each do |method_name|
+      # define_method can't be used here for Ruby 3.1 import_methods behavior
+      module_eval(
+        %Q!
+          def #{method_name}
+            to_s.#{method_name}.to_sym
+          end
+        !, __FILE__, __LINE__ - 4
+      )
+    end
+  end
+
+  refine Symbol do
+    import_methods SymbolExtension
   end
 end

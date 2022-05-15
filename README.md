@@ -26,7 +26,7 @@ require 'lettercase'
 
 LetterCase.pascalize 'letter_case' #=> "LetterCase"
 
-require 'lettercase/core_ext'
+using LetterCase
 
 'LetterCase'.snakecase             #=> "letter_case"
 'letter_case'.camelcase            #=> "letterCase"
