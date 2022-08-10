@@ -1,1 +1,3 @@
---readme README.md lib/**/*.rb - LICENSE
+--fail-on-warning
+-
+LICENSE
