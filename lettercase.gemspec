@@ -3,7 +3,7 @@
 
 lib_name = 'lettercase'
 
-require_relative './lib/lettercase/version'
+require_relative 'lib/lettercase/version'
 repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
