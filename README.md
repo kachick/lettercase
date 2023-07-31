@@ -1,8 +1,11 @@
 lettercase
 ==========
 
+- _**This repository is archived**_
+- _**No longer maintained**_
+- _**All versions have been removed from <https://rubygems.org> to free up valuable namespace for other developers**_.
+
 [![Build Status](https://github.com/kachick/lettercase/actions/workflows/test_behaviors.yml/badge.svg?branch=main)](https://github.com/kachick/lettercase/actions/workflows/test_behaviors.yml/?branch=main)
-[![Gem Version](https://badge.fury.io/rb/lettercase.svg)](https://badge.fury.io/rb/lettercase)
 
 Description
 -----------
@@ -43,13 +46,6 @@ Requirements
 -------------
 
 * Ruby - 3.1 or later
-
-Install
--------
-
-```bash
-$ gem install lettercase
-```
 
 License
 --------
