@@ -42,14 +42,3 @@ using LetterCase
 'letter_case'.PascalCase           #=> "LetterCase"
 ```
 
-Requirements
--------------
-
-* Ruby - 3.1 or later
-
-License
---------
-
-The MIT X11 License
-Copyright (C) 2012 Kenichi Kamiya
-See the file LICENSE for further details.
